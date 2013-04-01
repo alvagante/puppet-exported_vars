@@ -23,9 +23,9 @@ This module provides a similar functionality to set variables, based on the valu
 
 It's made of 2 different parts:
 
-* The define exported_vars::set , which is used to set variables on a node
+* The define **exported_vars::set** , which is used to set variables on a node
 
-* The function get_exported_var , which is used on the PuppetMaster to retrieve the values of exported variables and use them on other nodes.
+* The function **get_exported_var** , which is used on the PuppetMaster to retrieve the values of exported variables and use them on other nodes.
 
 It's based of storeconfigs (nodes actually export file resources which are realized on the PuppetMaster and parsed by the get_exported_var function) and therefore it requires them to be enabled on the PuppetMaster.
 
@@ -58,23 +58,23 @@ This module requires three different (and ordered) steps in order to be effectiv
         }
 
 
- * The define exported_vars::set just requires a title (the name of the variable to export) and an argument for its value:
+* The define **exported_vars::set** just requires a title (the name of the variable to export) and an argument for its value:
 
         exported_vars::set { 'exported_variable_name':
           value => 'exported_variable_value',
         }
 
 
- * The function get_exported_var() has 3 arguments:
+* The function **get_exported_var()** has 3 arguments:
 
-  - The name/tag of the node that exported the variable ( Leave '' to gather the variable for all the nodes, a name like 'web', gathers also values from nodes whose hostname is 'web', 'web01', 'web02', 'webserver'.., a name like 'web\.' gets only variables from a node whose hostname is 'web')
+  - The **name/tag of the node** that exported the variable (Leave '' to gather the variable for all the nodes, a name like 'web', gathers also values from nodes whose hostname is 'web', 'web01', 'web02', 'webserver'.., a name like 'web\.' gets only variables from a node whose hostname is 'web')
 
-  - The name of the exported variable (as defined by exported_vars::set). Do not use points (.) or slashes (/) in the variable names.
+  - The **name of the exported variable** (as defined by exported_vars::set). Do not use points (.) or slashes (/) in the variable names.
 
-  - The default value to return in case no exported variable is found.
+  - The **default value** to return in case no exported variable is found.
 
 The function returns a comma separated list of all the values of the found exported variables, given the above filters (optional node name and variable name).
 
-  * All the exported variables are saved, as files, on the PuppetMaster (on in any place where you include exported_vars, but only on the PuppetMaster that's required) under the directory /var/lib/puppet/exported_vars.
+* All the exported variables are saved, as files, on the PuppetMaster (on in any place where you include exported_vars, but only on the PuppetMaster that's required) under the directory /var/lib/puppet/exported_vars.
 
 
