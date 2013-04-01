@@ -1,0 +1,4 @@
+fixtures:
+  symlinks:
+    "exported_vars": "#{source_dir}"
+
