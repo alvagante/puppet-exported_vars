@@ -6,11 +6,11 @@ It allows the setting of variables on hosts and their collection on other hosts,
 
 It has no other modules dependencies but it **requires storeconfigs** on the PuppetMaster.
 
-Written by Alessandro Franceschi / Lab42 and Geoff Ghibble / AllOver.IO
+Written by Alessandro Franceschi / Lab42 and AllOver.IO
 
 Official site: http://www.example42.com
 
-Official git repository: http://github.com/example42/puppet-exported_Vars
+Official git repository: http://github.com/example42/puppet-exported_vars
 
 Released under the terms of Apache 2 License.
 
