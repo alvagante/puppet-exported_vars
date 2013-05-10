@@ -36,8 +36,9 @@ module Puppet::Parser::Functions
       #log.debug "(Values.n = #{values.nil?})"
       if values.empty?
         dvalue
-      else 
-        values.join(',')
+      else
+        values.to_a
+        # values.join(',')
       end
     else
       dvalue
