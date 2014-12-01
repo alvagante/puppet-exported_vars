@@ -1,0 +1,14 @@
+{
+  "author": "Alessandro Franceschi",
+  "dependencies": [],
+  "license": "Apache2",
+  "name": "example42-exported_vars",
+  "operatingsystem_support": [],
+  "project_page": "http://www.example42.com",
+  "requirements": [],
+  "source": "https://github.com/example42/puppet-exported_vars",
+  "summary": "Puppet module to set and collect exported variables among nodes",
+  "tags": [],
+  "version": "0.0.3"
+}
+
