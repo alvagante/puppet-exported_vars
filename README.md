@@ -1,5 +1,9 @@
 # Puppet module: exported_vars
 
+## DEPRECATION NOTICE
+This module is old and deprecated. There are far better ways to do such things with PuppetDB.
+
+
 This module reproduces the behaviour of export resources for variables.
 
 It allows the setting of variables on hosts and their collection on other hosts, enabling easier management of elastic environments where you might not know, upfront, names or ip addresses of hosts or where you have a growing and changing set on nodes.
